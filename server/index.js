@@ -9,8 +9,8 @@ app.use(bodyParser.json());
 app.use(morgan("dev"));
 app.use(cors());
 //Routes
-app.get("/api", (req, res) => {
-    res.send("hello");
+app.post("/register", (req, res) => {
+    res.send(`hello ${req.body.email} your user is registered`);
 });
 //PORT
 const port = process.env.PORT || 5000;
